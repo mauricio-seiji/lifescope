@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
+using TMPro;
 
 public class GreenCoccus : Coccus
 {
@@ -8,15 +10,10 @@ public class GreenCoccus : Coccus
 
     [SerializeField] private GreenCoccus greenCoccusPrefab;
 
-    Renderer objectRenderer;
-
     void Start()
     {
         CoccusStart();
         energyRestoreRate = UnityEngine.Random.Range(minEnergyRestoreRate, maxEnergyRestoreRate);
-
-        objectRenderer = GetComponent<Renderer>();
-        objectRenderer.material.color = Color.green;
         energy = 100;
     }
 

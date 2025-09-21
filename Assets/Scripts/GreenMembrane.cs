@@ -1,27 +1,23 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using static UnityEngine.EventSystems.EventTrigger;
 
-public class GreenMembrane : MonoBehaviour
+public class GreenMembrane : CellNucleus
 {
     [SerializeField] private float minEnergyRestoreRate = 1f;
     [SerializeField] private float maxEnergyRestoreRate = 5f;
-    private float energyRestoreRate = 5f;
+    private float energyRestoreRate = 1f;
     private float energy = 100f;
-    private float energyToReproduce = 120f;
+    private float energyToReproduce = 300f;
 
     [SerializeField] private GreenCoccus greenCoccusPrefab;
-
-    Renderer objectRenderer;
 
     void Start()
     {
         energyRestoreRate = UnityEngine.Random.Range(minEnergyRestoreRate, maxEnergyRestoreRate);
-
-        objectRenderer = GetComponent<Renderer>();
-        objectRenderer.material.color = Color.green;
         energy = 100;
     }
-
     
     void Update()
     {
@@ -29,7 +25,7 @@ public class GreenMembrane : MonoBehaviour
 
         if (energy >= energyToReproduce)
         {
-            Instantiate(greenCoccusPrefab, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+            Instantiate(greenCoccusPrefab, new Vector3(transform.position.x + 0.5f, transform.position.y + 0.5f, 0), Quaternion.identity);
             energy = 80;
         }
     }

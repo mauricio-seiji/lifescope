@@ -56,10 +56,12 @@ MonoBehaviour:
   maxSpeed: 4
   minScale: 0.2
   maxScale: 0.6
-  newScale: {x: 2, y: 2, z: 2}
-  minEnergyDecayRate: 1
+  minEnergyDecayRate: 2
   maxEnergyDecayRate: 5
   redCoccusPrefab: {fileID: -5380476694029974381}
+  ExcretionPrefab: {fileID: 3617273084518330552, guid: 184cb2ce0bb00f948b434157512ef970, type: 3}
+  toolTipTMP: {fileID: 0}
+  fadeOutDuration: 10
 --- !u!212 &-1982119827690456242
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -103,13 +105,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: b3c5fdfa283312b4b80453798bb9c9b5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 8267697595490115578, guid: 886caf3f2bf374f4d825a56974da573b, type: 3}
+  m_Color: {r: 0.9811321, g: 0, b: 0, a: 0.78431374}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.535, y: 2.565}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

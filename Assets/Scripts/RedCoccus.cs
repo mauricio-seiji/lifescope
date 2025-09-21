@@ -1,38 +1,42 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class RedCoccus : Coccus
 {
-    [SerializeField] private float minEnergyDecayRate = 1f;
+    [SerializeField] private float minEnergyDecayRate = 2f;
     [SerializeField] private float maxEnergyDecayRate = 5f;
-    private float energyDecayRate = 1f;
+    private float energyDecayRate = 2f;
 
     private float noKillingPeriod = 2f;
 
     [SerializeField] private RedCoccus redCoccusPrefab;
-
-    Renderer objectRenderer;
+    [SerializeField] private Excretion ExcretionPrefab;
 
     void Start()
     {
         CoccusStart();
 
-        objectRenderer = GetComponent<Renderer>();
-        objectRenderer.material.color = Color.red;
         energyDecayRate = UnityEngine.Random.Range(minEnergyDecayRate, maxEnergyDecayRate);
         energy = 100;
     }
+
     void Update()
     {
         CoccusUpdate();
         if (noKillingPeriod >= 0) noKillingPeriod -= Time.deltaTime;
 
-        //Red dies a little energy each frame (starving)
+        //Red loses a little energy each update (starving)
         energy -= energyDecayRate * Time.deltaTime;
 
         if (energy >= energyToReproduce)
         {
-            Instantiate(redCoccusPrefab, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
             energy = 100;
+
+            Instantiate(redCoccusPrefab, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+
+            //Red poops after reproducing
+            Instantiate(ExcretionPrefab, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
         }
     }
 
@@ -48,5 +52,4 @@ public class RedCoccus : Coccus
             energy += 20;
         }
     }
-
 }

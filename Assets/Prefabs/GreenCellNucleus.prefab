@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3951498546358406597}
+  - component: {fileID: 6546966570071260621}
+  - component: {fileID: 6367476958673153879}
   - component: {fileID: 3772065140666293841}
   - component: {fileID: 1805854045360589870}
   - component: {fileID: 4991194895990618495}
-  - component: {fileID: 6367476958673153879}
-  - component: {fileID: 6546966570071260621}
   m_Layer: 0
   m_Name: GreenCellNucleus
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 56540964103650235}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.7540607, y: 1.0440836, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5164, y: 0.55395, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -42,6 +42,32 @@ Transform:
   - {fileID: 2043118624666454122}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6546966570071260621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56540964103650235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba9425bb7cc4c7a43b046bed15c6b7a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  direction: {x: 0, y: 0}
+--- !u!114 &6367476958673153879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56540964103650235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34424c5e77e0d82499a97e7287c75afb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &3772065140666293841
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -85,9 +111,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: b3c5fdfa283312b4b80453798bb9c9b5, type: 3}
-  m_Color: {r: 0, g: 0.4528302, b: 0.11483941, a: 1}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 2653545499374537763, guid: 8d92772731856a440b460d8b41c3a5ea, type: 3}
+  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -160,32 +186,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &6367476958673153879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56540964103650235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34424c5e77e0d82499a97e7287c75afb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6546966570071260621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56540964103650235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba9425bb7cc4c7a43b046bed15c6b7a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  direction: {x: 0, y: 0}
 --- !u!1 &135781829824217899
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,6 +195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2043118624666454122}
+  - component: {fileID: 7532083574337830269}
   - component: {fileID: 7200400537504716846}
   - component: {fileID: 9114904610721635086}
   - component: {fileID: 6916301663041782030}
@@ -202,7 +203,6 @@ GameObject:
   - component: {fileID: 3100466447723192657}
   - component: {fileID: 5983867860048790203}
   - component: {fileID: 8543089584087156063}
-  - component: {fileID: 7532083574337830269}
   m_Layer: 0
   m_Name: GreenMembrane
   m_TagString: Untagged
@@ -225,6 +225,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3951498546358406597}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7532083574337830269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135781829824217899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a1f6b91cb263d43a4fb51bcdf8694b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minEnergyRestoreRate: 1
+  maxEnergyRestoreRate: 5
+  greenCoccusPrefab: {fileID: -2371882250738451559, guid: 28b35241fbf71224c8920b7f5c6c8245, type: 3}
 --- !u!212 &7200400537504716846
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -268,13 +283,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: b3c5fdfa283312b4b80453798bb9c9b5, type: 3}
-  m_Color: {r: 0.0039215684, g: 1, b: 0.04022521, a: 1}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 2653545499374537763, guid: 8d92772731856a440b460d8b41c3a5ea, type: 3}
+  m_Color: {r: 0.17181383, g: 0.9339623, b: 0.24808785, a: 0.9019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.9233333, y: 1.84}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -361,7 +376,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.33241943
+  m_Distance: 0.33241937
   m_MaxDistanceOnly: 0
 --- !u!231 &3100466447723192657
 SpringJoint2D:
@@ -381,7 +396,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.38179407
+  m_Distance: 0.381794
   m_DampingRatio: 0
   m_Frequency: 1
 --- !u!231 &5983867860048790203
@@ -402,7 +417,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.40085962
+  m_Distance: 0.40085968
   m_DampingRatio: 0
   m_Frequency: 1
 --- !u!231 &8543089584087156063
@@ -423,24 +438,9 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.33241943
+  m_Distance: 0.33241937
   m_DampingRatio: 0
   m_Frequency: 1
---- !u!114 &7532083574337830269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 135781829824217899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54a1f6b91cb263d43a4fb51bcdf8694b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minEnergyRestoreRate: 1
-  maxEnergyRestoreRate: 5
-  greenCoccusPrefab: {fileID: -2371882250738451559, guid: 28b35241fbf71224c8920b7f5c6c8245, type: 3}
 --- !u!1 &4272118954673045995
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,6 +450,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5142811359434695922}
+  - component: {fileID: 6972725214065194722}
   - component: {fileID: 8548030778168343762}
   - component: {fileID: 4451748104991174510}
   - component: {fileID: 6373274890613472910}
@@ -457,7 +458,6 @@ GameObject:
   - component: {fileID: 3959544850888188814}
   - component: {fileID: 4890508273060178579}
   - component: {fileID: 3244896829096906949}
-  - component: {fileID: 6972725214065194722}
   m_Layer: 0
   m_Name: GreenMembrane
   m_TagString: Untagged
@@ -480,6 +480,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3951498546358406597}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6972725214065194722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4272118954673045995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a1f6b91cb263d43a4fb51bcdf8694b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minEnergyRestoreRate: 1
+  maxEnergyRestoreRate: 5
+  greenCoccusPrefab: {fileID: -2371882250738451559, guid: 28b35241fbf71224c8920b7f5c6c8245, type: 3}
 --- !u!212 &8548030778168343762
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -523,13 +538,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: b3c5fdfa283312b4b80453798bb9c9b5, type: 3}
-  m_Color: {r: 0.0039215684, g: 1, b: 0.04022521, a: 1}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 2653545499374537763, guid: 8d92772731856a440b460d8b41c3a5ea, type: 3}
+  m_Color: {r: 0.17181383, g: 0.9339623, b: 0.24808785, a: 0.9019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.9233333, y: 1.84}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -616,7 +631,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.38875496
+  m_Distance: 0.38875467
   m_MaxDistanceOnly: 0
 --- !u!231 &3959544850888188814
 SpringJoint2D:
@@ -636,7 +651,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.3678727
+  m_Distance: 0.36787254
   m_DampingRatio: 0
   m_Frequency: 1
 --- !u!231 &4890508273060178579
@@ -657,7 +672,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.36021566
+  m_Distance: 0.36021557
   m_DampingRatio: 0
   m_Frequency: 1
 --- !u!231 &3244896829096906949
@@ -678,24 +693,9 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.38875496
+  m_Distance: 0.38875467
   m_DampingRatio: 0
   m_Frequency: 1
---- !u!114 &6972725214065194722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4272118954673045995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54a1f6b91cb263d43a4fb51bcdf8694b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minEnergyRestoreRate: 1
-  maxEnergyRestoreRate: 5
-  greenCoccusPrefab: {fileID: -2371882250738451559, guid: 28b35241fbf71224c8920b7f5c6c8245, type: 3}
 --- !u!1 &5407443608496988014
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,6 +705,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7118603680022978517}
+  - component: {fileID: 5278596456061671744}
   - component: {fileID: 3448746221667472080}
   - component: {fileID: 2804920847936456665}
   - component: {fileID: 2307159131483506819}
@@ -712,7 +713,6 @@ GameObject:
   - component: {fileID: 544234270033578445}
   - component: {fileID: 8794055757521749499}
   - component: {fileID: 3595957643810223100}
-  - component: {fileID: 5278596456061671744}
   m_Layer: 0
   m_Name: GreenMembrane
   m_TagString: Untagged
@@ -735,6 +735,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3951498546358406597}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5278596456061671744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5407443608496988014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a1f6b91cb263d43a4fb51bcdf8694b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minEnergyRestoreRate: 1
+  maxEnergyRestoreRate: 5
+  greenCoccusPrefab: {fileID: -2371882250738451559, guid: 28b35241fbf71224c8920b7f5c6c8245, type: 3}
 --- !u!212 &3448746221667472080
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -778,13 +793,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: b3c5fdfa283312b4b80453798bb9c9b5, type: 3}
-  m_Color: {r: 0.0039215684, g: 1, b: 0.04022521, a: 1}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 2653545499374537763, guid: 8d92772731856a440b460d8b41c3a5ea, type: 3}
+  m_Color: {r: 0.17181383, g: 0.9339623, b: 0.24808785, a: 0.9019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.9233333, y: 1.84}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -871,7 +886,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.35678816
+  m_Distance: 0.35678825
   m_MaxDistanceOnly: 0
 --- !u!231 &544234270033578445
 SpringJoint2D:
@@ -912,7 +927,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.35678816
+  m_Distance: 0.35678825
   m_DampingRatio: 0
   m_Frequency: 1
 --- !u!231 &3595957643810223100
@@ -933,24 +948,9 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.33241943
+  m_Distance: 0.33241937
   m_DampingRatio: 0
   m_Frequency: 1
---- !u!114 &5278596456061671744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5407443608496988014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54a1f6b91cb263d43a4fb51bcdf8694b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minEnergyRestoreRate: 1
-  maxEnergyRestoreRate: 5
-  greenCoccusPrefab: {fileID: -2371882250738451559, guid: 28b35241fbf71224c8920b7f5c6c8245, type: 3}
 --- !u!1 &7192306628998864352
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,6 +960,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5605476922576364126}
+  - component: {fileID: 4181029418848851294}
   - component: {fileID: 4378646028494625848}
   - component: {fileID: 4465022007249581737}
   - component: {fileID: 8983290385655752115}
@@ -967,7 +968,6 @@ GameObject:
   - component: {fileID: 2073305383942569621}
   - component: {fileID: 306066877856026940}
   - component: {fileID: 2164814392931277818}
-  - component: {fileID: 4181029418848851294}
   m_Layer: 0
   m_Name: GreenMembrane
   m_TagString: Untagged
@@ -990,6 +990,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3951498546358406597}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4181029418848851294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7192306628998864352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a1f6b91cb263d43a4fb51bcdf8694b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minEnergyRestoreRate: 1
+  maxEnergyRestoreRate: 5
+  greenCoccusPrefab: {fileID: -2371882250738451559, guid: 28b35241fbf71224c8920b7f5c6c8245, type: 3}
 --- !u!212 &4378646028494625848
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1033,13 +1048,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: b3c5fdfa283312b4b80453798bb9c9b5, type: 3}
-  m_Color: {r: 0.0039215684, g: 1, b: 0.04022521, a: 1}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 2653545499374537763, guid: 8d92772731856a440b460d8b41c3a5ea, type: 3}
+  m_Color: {r: 0.17181383, g: 0.9339623, b: 0.24808785, a: 0.9019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.9233333, y: 1.84}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1126,7 +1141,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.40085962
+  m_Distance: 0.40085968
   m_MaxDistanceOnly: 0
 --- !u!231 &2073305383942569621
 SpringJoint2D:
@@ -1146,7 +1161,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.3939182
+  m_Distance: 0.39391825
   m_DampingRatio: 0
   m_Frequency: 1
 --- !u!231 &306066877856026940
@@ -1167,7 +1182,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.40214026
+  m_Distance: 0.4021404
   m_DampingRatio: 0
   m_Frequency: 1
 --- !u!231 &2164814392931277818
@@ -1188,24 +1203,9 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.40085962
+  m_Distance: 0.40085968
   m_DampingRatio: 0
   m_Frequency: 1
---- !u!114 &4181029418848851294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7192306628998864352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54a1f6b91cb263d43a4fb51bcdf8694b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minEnergyRestoreRate: 1
-  maxEnergyRestoreRate: 5
-  greenCoccusPrefab: {fileID: -2371882250738451559, guid: 28b35241fbf71224c8920b7f5c6c8245, type: 3}
 --- !u!1 &7932680096235873632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,6 +1215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4493993856675458302}
+  - component: {fileID: 8276594141119030793}
   - component: {fileID: 7166709070647452294}
   - component: {fileID: 2050076279879602351}
   - component: {fileID: 112247477155109913}
@@ -1222,7 +1223,6 @@ GameObject:
   - component: {fileID: 1129334838240297653}
   - component: {fileID: 5004344154450913805}
   - component: {fileID: 7330500268844646863}
-  - component: {fileID: 8276594141119030793}
   m_Layer: 0
   m_Name: GreenMembrane
   m_TagString: Untagged
@@ -1245,6 +1245,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3951498546358406597}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8276594141119030793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7932680096235873632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a1f6b91cb263d43a4fb51bcdf8694b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minEnergyRestoreRate: 1
+  maxEnergyRestoreRate: 5
+  greenCoccusPrefab: {fileID: -2371882250738451559, guid: 28b35241fbf71224c8920b7f5c6c8245, type: 3}
 --- !u!212 &7166709070647452294
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1288,13 +1303,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: b3c5fdfa283312b4b80453798bb9c9b5, type: 3}
-  m_Color: {r: 0.0039215684, g: 1, b: 0.04022521, a: 1}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 2653545499374537763, guid: 8d92772731856a440b460d8b41c3a5ea, type: 3}
+  m_Color: {r: 0.17181383, g: 0.9339623, b: 0.24808785, a: 0.9019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.9233333, y: 1.84}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1381,7 +1396,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.36021566
+  m_Distance: 0.36021557
   m_MaxDistanceOnly: 0
 --- !u!231 &1129334838240297653
 SpringJoint2D:
@@ -1401,7 +1416,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.36701572
+  m_Distance: 0.3670158
   m_DampingRatio: 0
   m_Frequency: 1
 --- !u!231 &5004344154450913805
@@ -1422,7 +1437,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.35678816
+  m_Distance: 0.35678825
   m_DampingRatio: 0
   m_Frequency: 1
 --- !u!231 &7330500268844646863
@@ -1443,24 +1458,9 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.36021566
+  m_Distance: 0.36021557
   m_DampingRatio: 0
   m_Frequency: 1
---- !u!114 &8276594141119030793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7932680096235873632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54a1f6b91cb263d43a4fb51bcdf8694b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minEnergyRestoreRate: 1
-  maxEnergyRestoreRate: 5
-  greenCoccusPrefab: {fileID: -2371882250738451559, guid: 28b35241fbf71224c8920b7f5c6c8245, type: 3}
 --- !u!1 &8678407897207968620
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,6 +1470,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8494338435548614476}
+  - component: {fileID: 935547546745900785}
   - component: {fileID: 6596151884744644830}
   - component: {fileID: 882602584188118139}
   - component: {fileID: 5635729907900149709}
@@ -1477,7 +1478,6 @@ GameObject:
   - component: {fileID: 6894779160361873826}
   - component: {fileID: 5562960177566397882}
   - component: {fileID: 7321778827932483005}
-  - component: {fileID: 935547546745900785}
   m_Layer: 0
   m_Name: GreenMembrane
   m_TagString: Untagged
@@ -1500,6 +1500,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3951498546358406597}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &935547546745900785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8678407897207968620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a1f6b91cb263d43a4fb51bcdf8694b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minEnergyRestoreRate: 1
+  maxEnergyRestoreRate: 5
+  greenCoccusPrefab: {fileID: -2371882250738451559, guid: 28b35241fbf71224c8920b7f5c6c8245, type: 3}
 --- !u!212 &6596151884744644830
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1543,13 +1558,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: b3c5fdfa283312b4b80453798bb9c9b5, type: 3}
-  m_Color: {r: 0.0039215684, g: 1, b: 0.04022521, a: 1}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 2653545499374537763, guid: 8d92772731856a440b460d8b41c3a5ea, type: 3}
+  m_Color: {r: 0.17181383, g: 0.9339623, b: 0.24808785, a: 0.9019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.9233333, y: 1.84}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1636,7 +1651,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.40214026
+  m_Distance: 0.4021404
   m_MaxDistanceOnly: 0
 --- !u!231 &6894779160361873826
 SpringJoint2D:
@@ -1656,7 +1671,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.3495993
+  m_Distance: 0.34959927
   m_DampingRatio: 0
   m_Frequency: 1
 --- !u!231 &5562960177566397882
@@ -1677,7 +1692,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.38875496
+  m_Distance: 0.38875467
   m_DampingRatio: 0
   m_Frequency: 1
 --- !u!231 &7321778827932483005
@@ -1698,21 +1713,6 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.40214026
+  m_Distance: 0.4021404
   m_DampingRatio: 0
   m_Frequency: 1
---- !u!114 &935547546745900785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8678407897207968620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54a1f6b91cb263d43a4fb51bcdf8694b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minEnergyRestoreRate: 1
-  maxEnergyRestoreRate: 5
-  greenCoccusPrefab: {fileID: -2371882250738451559, guid: 28b35241fbf71224c8920b7f5c6c8245, type: 3}

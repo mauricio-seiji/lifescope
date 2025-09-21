@@ -30,7 +30,7 @@ public class Coccus : BaseLife
     {
         BaseLifeUpdate();
 
-        //Dies for lack of energy
+        //Checks if should die due to lack of energy
         if (energy <= 0) UnityEngine.Object.Destroy(this.gameObject);
     }
 }

@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3350650544765491752}
   - component: {fileID: -2371882250738451559}
+  - component: {fileID: -3614851032460317132}
   - component: {fileID: 3397426294275710873}
   - component: {fileID: -6227271303086749981}
-  - component: {fileID: -2462378823327464351}
-  - component: {fileID: -3614851032460317132}
+  - component: {fileID: 4911186225886409791}
   m_Layer: 0
   m_Name: GreenCoccus
   m_TagString: Untagged
@@ -48,14 +48,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd38e9a51f17185468b4276cb4a192ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energyToReproduce: 120
+  speed: 1
+  direction: {x: 0, y: 0}
+  energyToReproduce: 140
   energy: 100
   minSpeed: 0
-  maxSpeed: 4
-  isEatable: 0
+  maxSpeed: 2
+  minScale: 0.2
+  maxScale: 0.6
   minEnergyRestoreRate: 1
-  maxEnergyRestoreRate: 5
+  maxEnergyRestoreRate: 2
   greenCoccusPrefab: {fileID: -2371882250738451559}
+  toolTipTMP: {fileID: 0}
+  fadeOutDuration: 10
+--- !u!114 &-3614851032460317132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5546522210827217257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34424c5e77e0d82499a97e7287c75afb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &3397426294275710873
 Rigidbody2D:
   serializedVersion: 5
@@ -68,7 +85,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -119,7 +136,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!212 &-2462378823327464351
+--- !u!212 &4911186225886409791
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,27 +179,15 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: b3c5fdfa283312b4b80453798bb9c9b5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 2653545499374537763, guid: 8d92772731856a440b460d8b41c3a5ea, type: 3}
+  m_Color: {r: 0, g: 1, b: 0, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.885, y: 2.76}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-3614851032460317132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5546522210827217257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34424c5e77e0d82499a97e7287c75afb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
