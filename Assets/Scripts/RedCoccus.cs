@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class RedCoccus : Coccus
+public class RedCoccus : Coccus, IPointerClickHandler
 {
     [SerializeField] private float minEnergyDecayRate = 2f;
     [SerializeField] private float maxEnergyDecayRate = 5f;
@@ -13,7 +13,11 @@ public class RedCoccus : Coccus
     [SerializeField] private RedCoccus redCoccusPrefab;
     [SerializeField] private Excretion ExcretionPrefab;
 
-    void Start()
+    void Awake()
+    {
+        CoccusAwake();
+    }
+        void Start()
     {
         CoccusStart();
 
@@ -33,7 +37,7 @@ public class RedCoccus : Coccus
         {
             energy = 100;
 
-            Instantiate(redCoccusPrefab, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+            CreateCoccus(redCoccusPrefab.gameObject, new Vector3(transform.position.x + 0.5f, transform.position.y + 0.5f, 0));
 
             //Red poops after reproducing
             Instantiate(ExcretionPrefab, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
@@ -48,8 +52,13 @@ public class RedCoccus : Coccus
         //Red kills Green after the No Killing Period
         if (noKillingPeriod <= 0 && otherCoccus is GreenCoccus)
         {
-            UnityEngine.Object.Destroy(otherCoccus.gameObject);
+            otherCoccus.isDead = true;
             energy += 20;
         }
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        CreateCoccus(redCoccusPrefab.gameObject, new Vector3(transform.position.x + 1f, transform.position.y + 1f, 0));
     }
 }

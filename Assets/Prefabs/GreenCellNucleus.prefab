@@ -237,6 +237,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a1f6b91cb263d43a4fb51bcdf8694b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
+  direction: {x: 0, y: 0}
   minEnergyRestoreRate: 1
   maxEnergyRestoreRate: 5
   greenCoccusPrefab: {fileID: -2371882250738451559, guid: 28b35241fbf71224c8920b7f5c6c8245, type: 3}
@@ -285,7 +287,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 2653545499374537763, guid: 8d92772731856a440b460d8b41c3a5ea, type: 3}
-  m_Color: {r: 0.17181383, g: 0.9339623, b: 0.24808785, a: 0.9019608}
+  m_Color: {r: 0.17181383, g: 0.9339623, b: 0.24808785, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -492,6 +494,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a1f6b91cb263d43a4fb51bcdf8694b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
+  direction: {x: 0, y: 0}
   minEnergyRestoreRate: 1
   maxEnergyRestoreRate: 5
   greenCoccusPrefab: {fileID: -2371882250738451559, guid: 28b35241fbf71224c8920b7f5c6c8245, type: 3}
@@ -540,7 +544,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 2653545499374537763, guid: 8d92772731856a440b460d8b41c3a5ea, type: 3}
-  m_Color: {r: 0.17181383, g: 0.9339623, b: 0.24808785, a: 0.9019608}
+  m_Color: {r: 0.17181383, g: 0.9339623, b: 0.24808785, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -747,6 +751,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a1f6b91cb263d43a4fb51bcdf8694b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
+  direction: {x: 0, y: 0}
   minEnergyRestoreRate: 1
   maxEnergyRestoreRate: 5
   greenCoccusPrefab: {fileID: -2371882250738451559, guid: 28b35241fbf71224c8920b7f5c6c8245, type: 3}
@@ -795,7 +801,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 2653545499374537763, guid: 8d92772731856a440b460d8b41c3a5ea, type: 3}
-  m_Color: {r: 0.17181383, g: 0.9339623, b: 0.24808785, a: 0.9019608}
+  m_Color: {r: 0.17181383, g: 0.9339623, b: 0.24808785, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1002,6 +1008,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a1f6b91cb263d43a4fb51bcdf8694b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
+  direction: {x: 0, y: 0}
   minEnergyRestoreRate: 1
   maxEnergyRestoreRate: 5
   greenCoccusPrefab: {fileID: -2371882250738451559, guid: 28b35241fbf71224c8920b7f5c6c8245, type: 3}
@@ -1050,7 +1058,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 2653545499374537763, guid: 8d92772731856a440b460d8b41c3a5ea, type: 3}
-  m_Color: {r: 0.17181383, g: 0.9339623, b: 0.24808785, a: 0.9019608}
+  m_Color: {r: 0.17181383, g: 0.9339623, b: 0.24808785, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1257,6 +1265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a1f6b91cb263d43a4fb51bcdf8694b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
+  direction: {x: 0, y: 0}
   minEnergyRestoreRate: 1
   maxEnergyRestoreRate: 5
   greenCoccusPrefab: {fileID: -2371882250738451559, guid: 28b35241fbf71224c8920b7f5c6c8245, type: 3}
@@ -1305,7 +1315,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 2653545499374537763, guid: 8d92772731856a440b460d8b41c3a5ea, type: 3}
-  m_Color: {r: 0.17181383, g: 0.9339623, b: 0.24808785, a: 0.9019608}
+  m_Color: {r: 0.17181383, g: 0.9339623, b: 0.24808785, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1512,6 +1522,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a1f6b91cb263d43a4fb51bcdf8694b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
+  direction: {x: 0, y: 0}
   minEnergyRestoreRate: 1
   maxEnergyRestoreRate: 5
   greenCoccusPrefab: {fileID: -2371882250738451559, guid: 28b35241fbf71224c8920b7f5c6c8245, type: 3}
@@ -1560,7 +1572,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 2653545499374537763, guid: 8d92772731856a440b460d8b41c3a5ea, type: 3}
-  m_Color: {r: 0.17181383, g: 0.9339623, b: 0.24808785, a: 0.9019608}
+  m_Color: {r: 0.17181383, g: 0.9339623, b: 0.24808785, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Excretion
+  - Green Cell
+  - Pink Cell
+  - Red Cell
   layers:
   - Default
   - TransparentFX

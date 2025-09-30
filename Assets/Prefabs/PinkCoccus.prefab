@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2722709851713241636}
   m_Layer: 0
   m_Name: PinkCoccus
-  m_TagString: Untagged
+  m_TagString: Cell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,14 +55,11 @@ MonoBehaviour:
   maxSpeed: 1
   minScale: 0.2
   maxScale: 0.6
-  targetTag: Excretion
   MinCoolDownDuration: 1000
   MaxCoolDownDuration: 2000
   minEnergyDecayRate: 1
   maxEnergyDecayRate: 2
   pinkCoccusPrefab: {fileID: 7113571462305813624}
-  toolTipTMP: {fileID: 0}
-  fadeOutDuration: 10
 --- !u!212 &889176720461544136
 SpriteRenderer:
   m_ObjectHideFlags: 0

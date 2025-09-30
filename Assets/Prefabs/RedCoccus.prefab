@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -5429869143105595211}
   m_Layer: 0
   m_Name: RedCoccus
-  m_TagString: Untagged
+  m_TagString: Cell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,8 +60,6 @@ MonoBehaviour:
   maxEnergyDecayRate: 5
   redCoccusPrefab: {fileID: -5380476694029974381}
   ExcretionPrefab: {fileID: 3617273084518330552, guid: 184cb2ce0bb00f948b434157512ef970, type: 3}
-  toolTipTMP: {fileID: 0}
-  fadeOutDuration: 10
 --- !u!212 &-1982119827690456242
 SpriteRenderer:
   m_ObjectHideFlags: 0

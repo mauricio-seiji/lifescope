@@ -1,15 +1,9 @@
-using System;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using static UnityEngine.GraphicsBuffer;
 
-public class PinkCoccus : Coccus
+public class PinkCoccus : Coccus, IPointerClickHandler
 {
-    public string targetTag = "Excretion";
-    private GameObject closestExcretion;
-    private Boolean onCoolDown = false;
+    private bool onCoolDown = false;
     private int CoolDownCounter = 0;
     private int CoolDownDuration = 0;
     [SerializeField] private int MinCoolDownDuration = 1000;
@@ -21,6 +15,10 @@ public class PinkCoccus : Coccus
 
     [SerializeField] private PinkCoccus pinkCoccusPrefab;
 
+    void Awake()
+    {
+        CoccusAwake();
+    }
     void Start()
     {
         CoccusStart();
@@ -32,7 +30,7 @@ public class PinkCoccus : Coccus
     {
         CoccusUpdate();
 
-        MoveIfNeeded();
+        MoveAfterCoolDown();
 
         //White loses a little energy each update (starving)
         energy -= energyDecayRate * Time.deltaTime;
@@ -40,12 +38,11 @@ public class PinkCoccus : Coccus
         if (energy >= energyToReproduce)
         {
             energy = 100;
-            Instantiate(pinkCoccusPrefab, new Vector3(transform.position.x + 1f, transform.position.y + 1f, 0), Quaternion.identity);
+            CreateCoccus(pinkCoccusPrefab.gameObject, new Vector3(transform.position.x + 1f, transform.position.y + 1f, 0));
         }
 
     }
-
-    public void MoveIfNeeded()
+    public void MoveAfterCoolDown()
     {
         if (onCoolDown)
         {
@@ -59,55 +56,13 @@ public class PinkCoccus : Coccus
         }
         else
         {
-            FindTheClosestExcretion();
+            IMoveTowards moveTowards = new MoveTowards();
+            Vector3 newPosition = moveTowards.MoveTowardsClosestTarget("Excretion", transform.position, speed);
+            if (newPosition != Vector3.zero)
+                transform.position = newPosition;
         }
+            
     }
-
-    public void FindTheClosestExcretion()
-    {
-        GameObject[] allTargets = GameObject.FindGameObjectsWithTag(targetTag);
-
-        if (allTargets.Length == 0)
-        {
-            closestExcretion = null;
-            return;
-        }
-
-        float shortestDistance = Mathf.Infinity;
-        GameObject currentClosest = null;
-
-        foreach (GameObject target in allTargets)
-        {
-            // Calculate the squared distance to avoid expensive square root operations
-            // for comparison, as the relative order of distances remains the same.
-            float distanceSqr = (target.transform.position - transform.position).sqrMagnitude;
-
-            if (distanceSqr < shortestDistance)
-            {
-                shortestDistance = distanceSqr;
-                currentClosest = target;
-            }
-        }
-
-        closestExcretion = currentClosest;
-
-        if (closestExcretion != null)
-        {
-            Vector3 newPosition = Vector3.MoveTowards(
-                transform.position,
-                closestExcretion.transform.position,
-                speed * Time.deltaTime
-            );
-
-            transform.position = newPosition;
-        }
-    }
-
-    public GameObject GetClosestTarget()
-    {
-        return closestExcretion;
-    }
-
     private void OnCollisionEnter2D(Collision2D collisionObject)
     {
         Excretion excretion = collisionObject.gameObject.GetComponent<Excretion>();
@@ -117,5 +72,9 @@ public class PinkCoccus : Coccus
 
         energy += 5f;
         onCoolDown = true;
+    }
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        CreateCoccus(pinkCoccusPrefab.gameObject, new Vector3(transform.position.x + 0.5f, transform.position.y + 0.5f, 0));
     }
 }

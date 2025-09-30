@@ -20,7 +20,7 @@ public class PinkMembrane : Coccus
         if (energy >= energyToReproduce)
         {
             energy = 100;
-            Instantiate(pinkCoccusPrefab, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+            CreateCoccus(pinkCoccusPrefab.gameObject, new Vector3(transform.position.x + 1f, transform.position.y + 1f, 0));
         }
     }
 

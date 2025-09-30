@@ -60,8 +60,6 @@ MonoBehaviour:
   minScale: 0.4
   maxScale: 0.5
   pinkCoccusPrefab: {fileID: 7113571462305813624, guid: 495f54ed0eb3cc04d960b8eb98cb564f, type: 3}
-  toolTipTMP: {fileID: 0}
-  fadeOutDuration: 10
 --- !u!58 &7278338756699971294
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -323,8 +321,6 @@ MonoBehaviour:
   minScale: 0.4
   maxScale: 0.5
   pinkCoccusPrefab: {fileID: 7113571462305813624, guid: 495f54ed0eb3cc04d960b8eb98cb564f, type: 3}
-  toolTipTMP: {fileID: 0}
-  fadeOutDuration: 10
 --- !u!58 &1584565498873680305
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -586,8 +582,6 @@ MonoBehaviour:
   minScale: 0.6
   maxScale: 0.7
   pinkCoccusPrefab: {fileID: 7113571462305813624, guid: 495f54ed0eb3cc04d960b8eb98cb564f, type: 3}
-  toolTipTMP: {fileID: 0}
-  fadeOutDuration: 10
 --- !u!58 &4292256606517413252
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -849,8 +843,6 @@ MonoBehaviour:
   minScale: 0.4
   maxScale: 0.5
   pinkCoccusPrefab: {fileID: 7113571462305813624, guid: 495f54ed0eb3cc04d960b8eb98cb564f, type: 3}
-  toolTipTMP: {fileID: 0}
-  fadeOutDuration: 10
 --- !u!58 &2894414252395984751
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1112,8 +1104,6 @@ MonoBehaviour:
   minScale: 0.4
   maxScale: 0.5
   pinkCoccusPrefab: {fileID: 7113571462305813624, guid: 495f54ed0eb3cc04d960b8eb98cb564f, type: 3}
-  toolTipTMP: {fileID: 0}
-  fadeOutDuration: 10
 --- !u!58 &2692555877414952008
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1377,14 +1367,11 @@ MonoBehaviour:
   maxSpeed: 0.3
   minScale: 0.4
   maxScale: 0.5
-  targetTag: Excretion
   MinCoolDownDuration: 1200
   MaxCoolDownDuration: 3000
   minEnergyDecayRate: 1
   maxEnergyDecayRate: 2
   pinkCoccusPrefab: {fileID: 7113571462305813624, guid: 495f54ed0eb3cc04d960b8eb98cb564f, type: 3}
-  toolTipTMP: {fileID: 0}
-  fadeOutDuration: 10
 --- !u!114 &3472722623996314205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1575,8 +1562,6 @@ MonoBehaviour:
   minScale: 0.4
   maxScale: 0.5
   pinkCoccusPrefab: {fileID: 7113571462305813624, guid: 495f54ed0eb3cc04d960b8eb98cb564f, type: 3}
-  toolTipTMP: {fileID: 0}
-  fadeOutDuration: 10
 --- !u!58 &8957663323722209692
 CircleCollider2D:
   m_ObjectHideFlags: 0

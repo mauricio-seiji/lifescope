@@ -5,7 +5,7 @@ using static UnityEngine.EventSystems.EventTrigger;
 
 public class RedMembrane : Coccus
 {
-    [SerializeField] private RedCoccus RedCoccusPrefab;
+    [SerializeField] private RedCoccus redCoccusPrefab;
 
 
     void Start()
@@ -20,7 +20,7 @@ public class RedMembrane : Coccus
         if (energy >= energyToReproduce)
         {
             energy = 100;
-            Instantiate(RedCoccusPrefab, new Vector3(transform.position.x + 0.5f, transform.position.y + 0.5f, 0), Quaternion.identity);
+            CreateCoccus(redCoccusPrefab.gameObject, new Vector3(transform.position.x + 0.5f, transform.position.y + 0.5f, 0));
         }
     }
     private void OnCollisionEnter2D(Collision2D collisionObject)
@@ -30,7 +30,7 @@ public class RedMembrane : Coccus
 
         if (otherCoccus is GreenCoccus)
         {
-            UnityEngine.Object.Destroy(otherCoccus.gameObject);
+            otherCoccus.isDead = true;
             energy += 10;
         }
     }

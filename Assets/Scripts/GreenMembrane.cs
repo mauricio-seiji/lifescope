@@ -25,7 +25,8 @@ public class GreenMembrane : CellNucleus
 
         if (energy >= energyToReproduce)
         {
-            Instantiate(greenCoccusPrefab, new Vector3(transform.position.x + 0.5f, transform.position.y + 0.5f, 0), Quaternion.identity);
+            if (GlobalVariables.cellsCount < 150)
+                Instantiate(greenCoccusPrefab, new Vector3(transform.position.x + 0.5f, transform.position.y + 0.5f, 0), Quaternion.identity);
             energy = 80;
         }
     }

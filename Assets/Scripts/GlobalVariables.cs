@@ -1,7 +1,9 @@
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
-public static class GlobalVariables
+public class GlobalVariables
 {
     public static Vector2 SCREENBOUNDS;
-    public static bool ShowTutorial = true;
+    public static bool showTutorial = true;
+    public static int cellsCount = 0;
 }

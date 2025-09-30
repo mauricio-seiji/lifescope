@@ -12,6 +12,6 @@ public class ShowTutorialToggleHandler : MonoBehaviour
 
     void OnToggleValueChanged(bool isOn)
     {
-        GlobalVariables.ShowTutorial = isOn;
+        GlobalVariables.showTutorial = isOn;
     }
 }

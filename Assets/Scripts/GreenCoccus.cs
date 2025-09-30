@@ -1,22 +1,23 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-using TMPro;
 
-public class GreenCoccus : Coccus
+public class GreenCoccus : Coccus, IPointerClickHandler
 {
     [SerializeField] private float minEnergyRestoreRate = 1f;
     [SerializeField] private float maxEnergyRestoreRate = 5f;
     private float energyRestoreRate = 5f;
 
     [SerializeField] private GreenCoccus greenCoccusPrefab;
-
+    void Awake()
+    {
+        CoccusAwake();
+    }
     void Start()
     {
         CoccusStart();
         energyRestoreRate = UnityEngine.Random.Range(minEnergyRestoreRate, maxEnergyRestoreRate);
         energy = 100;
     }
-
     void Update()
     {
         CoccusUpdate();
@@ -24,8 +25,12 @@ public class GreenCoccus : Coccus
 
         if (energy >= energyToReproduce)
         {
-            Instantiate(greenCoccusPrefab, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+            CreateCoccus(greenCoccusPrefab.gameObject, new Vector3(transform.position.x + 0.5f, transform.position.y + 0.5f, 0));
             energy = 80;
         }
+    }
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        CreateCoccus(greenCoccusPrefab.gameObject, new Vector3(transform.position.x + 1f, transform.position.y + 1f, 0));
     }
 }
